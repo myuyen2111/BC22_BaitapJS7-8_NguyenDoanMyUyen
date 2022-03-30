@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Mảng</div>
+            <div class="card-body">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="txt_number"
+                  class="form-control"
+                  placeholder="Nhập số"
+                />
+              </div>
+              <button
+                id="btnadd_number"
+                class="btn btn-success m"
+                onclick="add_number()"
+              >
+                Thêm số
+              </button>
+              <div></div>
+              <br />
+              <button
+                id="btnadd_number"
+                class="btn btn-success m"
+                onclick="show_array()"
+              >
+                Hiện mảng đã nhập
+              </button>
+              <div id="array_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnsum_positive"
+                class="btn btn-info"
+                onclick="sum_positive()"
+              >
+                Tổng số dương
+              </button>
+              <div id="positive_sum_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnpositive_count"
+                class="btn btn-danger"
+                onclick="count_positive()"
+              >
+                Đếm số dương
+              </button>
+              <div id="positive_count_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnfind_min"
+                class="btn btn-info"
+                onclick="find_min()"
+              >
+                Tìm min
+              </button>
+              <div id="find_min_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnfindp_min"
+                class="btn btn-danger"
+                onclick="find_pmin()"
+              >
+                Tìm min dương
+              </button>
+              <div id="find_pmin_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnfinaleven"
+                class="btn btn-info"
+                onclick="finaleven()"
+              >
+                Tìm số chẵn cuối cùng
+              </button>
+              <div id="final_even_result" class="mt-2"></div>
+              <br />
+              <input
+                type="text"
+                id="txt_i1"
+                class="form-control"
+                placeholder="Nhập vị trí cần đổi 1 (bắt đầu từ 0)"
+              />
+              <input
+                type="text"
+                id="txt_i2"
+                class="form-control"
+                placeholder="Nhập vị trí cần đổi 2 (bắt đầu từ 0)"
+              />
+              <button
+                id="btnchange_i"
+                class="btn btn-danger"
+                onclick="changei()"
+              >
+                Đổi chỗ
+              </button>
+              <div id="change_i_result" class="mt-2"></div>
+              <br />
+              <button id="btnstob" class="btn btn-info" onclick="smalltobig()">
+                Sắp xếp mảng tăng dần
+              </button>
+              <div id="stob_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btnprime"
+                class="btn btn-danger"
+                onclick="find_first_prime()"
+              >
+                Tìm số nguyên tố đầu tiên
+              </button>
+              <div id="prime_result" class="mt-2"></div>
+              <br />
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="txt_realnumber"
+                  class="form-control"
+                  placeholder="Nhập số cho mảng thực"
+                />
+              </div>
+              <button
+                id="btnadd_number"
+                class="btn btn-success"
+                onclick="add_real_number()"
+              >
+                Thêm số
+              </button>
+              <div></div>
+              <br />
+              <button
+                id="btnintcount"
+                class="btn btn-info"
+                onclick="int_count()"
+              >
+                Số các số nguyên
+              </button>
+              <div id="int_count_result" class="mt-2"></div>
+              <br />
+              <button
+                id="btncompare"
+                class="btn btn-danger"
+                onclick="p_ncompare()"
+              >
+                So sánh âm, dương
+              </button>
+              <div id="compare_result" class="mt-2"></div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
